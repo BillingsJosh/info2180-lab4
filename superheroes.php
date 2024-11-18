@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *'); 
 
 $superheroes = [
   [
@@ -63,10 +64,32 @@ $superheroes = [
   ], 
 ];
 
+
+
+$query = isset($_GET['query']) ? trim($_GET['query']) : '';
+
+if (empty($query)) {
+    echo "<ul>";
+    foreach ($superheroes as $superhero) {
+        echo "<li>{$superhero['alias']}</li>";
+    }
+    echo "</ul>";
+} else {
+
+    $found = false;
+    foreach ($superheroes as $superhero) {
+        if (strcasecmp($superhero['name'], $query) == 0 || strcasecmp($superhero['alias'], $query) == 0) {
+            echo "<h3>{$superhero['alias']}</h3>";
+            echo "<h4>A.K.A. {$superhero['name']}</h4>";
+            echo "<p>{$superhero['biography']}</p>";
+            $found = true;
+            break;
+        }
+    }
+  
+    if (!$found) {
+        echo "<p class='not-found'>Superhero not found</p>";
+    }
+}
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>

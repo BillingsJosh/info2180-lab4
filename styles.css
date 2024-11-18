@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0e5;
+}
+
+/* Header Section */
+.top-section {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #1e72a9; /* Light blue background */
+    text-align: center;
+    color: white;
+}
+
+.top-section h1 {
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    margin-top: 15px;
+}
+
+.search-bar input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    margin-left: 5px;
+    background-color: #c43b2c; /* Red button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #a53124;
+}
+
+/* Separator Styling */
+.separator {
+    width: 80%;
+    height: 5px;
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Result Section */
+.bottom-section {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #ecf0f1; /* Light grey background */
+    text-align: center;
+}
+
+#result {
+    width: 60%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#result h2 {
+    font-size: 20px;
+    color: #2b2b2b;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Superhero Details Styling */
+.superhero-details h3 {
+    color: #e74c3c; /* Red color for superhero alias */
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.superhero-details h4 {
+    color: #484747;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.superhero-details p {
+    font-size: 16px;
+    color: #474947f7;
+}
+
+/* Not Found Message */
+#result .not-found {
+    color: #ff002f;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
